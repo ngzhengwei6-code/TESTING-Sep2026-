@@ -1,1 +1,1 @@
-##default for activty
+##default page for activty
