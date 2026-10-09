@@ -1,0 +1,29 @@
+body {
+  background-color: oldlace;
+}
+
+h1 {
+  color: navy;
+  letter-spacing: 5px; /* 1 */
+  text-transform: uppercase; /* 2 */
+  text-shadow: 2px 2px 4px gray; /* 3 */
+  opacity: 0.9; /* 8 */
+}
+
+p {
+  background-color: white;
+  color: black;
+  padding: 15px; /* 10 */
+  border-radius: 10px; /* 4 */
+  box-shadow: 3px 3px 8px silver; /* 5 */
+  word-spacing: 5px; /* 6 */
+}
+
+p.first-para {
+  text-indent: 30px; /* 7 */
+}
+
+font {
+  color: purple;
+  outline: 2px solid red; /* 9 */
+}
