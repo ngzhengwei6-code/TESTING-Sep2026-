@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop - NOVA</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="initShopPage()">
+
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="logo">NOVA</a>
+<nav class="main-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="shop.html" class="active">Shop</a></li>
+<li><a href="cart.html" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="shop-page">
+<div class="container">
+<a href="index.html" id="back-link" class="back-link" onclick="return goBack()">&larr; Back</a>
+<h1 class="page-title">Shop All Products</h1>
+
+<div class="filter-bar">
+<input type="text" id="search-input" onkeyup="renderProducts()" placeholder="Search products...">
+<select id="category-filter" onchange="renderProducts()">
+<option value="all">All Categories</option>
+<option value="Audio">Audio</option>
+<option value="Desk Setup">Desk Setup</option>
+<option value="Wearables">Wearables</option>
+<option value="Accessories">Accessories</option>
+</select>
+</div>
+
+<div class="grid" id="shop-grid"></div>
+</div>
+</section>
+
+<footer class="site-footer">
+&copy; 2026 NOVA. All rights reserved.
+</footer>
+
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
