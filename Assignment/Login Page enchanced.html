@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Login Interface</title>
+    <link rel="stylesheet" href="assignmentStyleSheet.css">
+    <link rel="icon" href="OIP.jpg">
+</head>
+<body>
+
+    <div class="login-card">
+        <img src="OIP.jpg" alt="Leaf Logo" class="login-icon">
+        <h2>Login Page</h2>
+
+        <form id="loginForm" onsubmit="return validateForm(event)">
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <div id="usernameError" class="error-message">Username is required.</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password">
+                    <button type="button" class="toggle-btn" onclick="togglePassword()">Show</button>
+                </div>
+                <div id="passwordError" class="error-message">Password must be at least 6 characters long.</div>
+            </div>
+
+            <input type="submit" value="Login" class="submit-btn">
+
+        </form>
+    </div>
+
+    <script>
+        // JavaScript Validation & Functionality
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = 'Show';
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const usernameError = document.getElementById('usernameError');
+            const passwordError = document.getElementById('passwordError');
+
+            let isValid = true;
+
+            // Username Validation
+            if (usernameInput.value.trim() === '') {
+                usernameError.style.display = 'block';
+                usernameInput.classList.add('input-error');
+                usernameInput.classList.remove('input-success');
+                isValid = false;
+            } else {
+                usernameError.style.display = 'none';
+                usernameInput.classList.remove('input-error');
+                usernameInput.classList.add('input-success');
+            }
+
+            // Password Validation
+            if (passwordInput.value.trim().length < 6) {
+                passwordError.style.display = 'block';
+                passwordInput.classList.add('input-error');
+                passwordInput.classList.remove('input-success');
+                isValid = false;
+            } else {
+                passwordError.style.display = 'none';
+                passwordInput.classList.remove('input-error');
+                passwordInput.classList.add('input-success');
+            }
+
+            if (isValid) {
+                alert('Login Successful! However this is a demo.');
+                // Form submission logic can go here
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>
