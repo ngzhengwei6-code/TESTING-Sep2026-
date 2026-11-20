@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz Lesson 16</title>
+
+<link rel="icon" href="kirk.jpg" type="image/jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table {
+border: 2px solid black; 
+width: 85%;
+margin: 0 auto; 
+border-spacing: 2px;
+border-collapse: separate;
+}
+
+td {
+padding: 6px;
+}
+
+u {
+color: blue;
+}
+
+b {
+color: red;
+}
+</style>
+</head>
+
+<body style="text-align: center;">
+
+<h1>DCS3003 Website Design Course Survey</h1>
+
+<table align="center">
+<tr>
+<td colspan="4" align="left"><u>Personal detail</u></td>
+</tr>
+
+<tr>
+<td align="left">Student ID</td>
+<td>: <input type="text" name="Sid" value="ID" size="30" maxlength="10"></td>
+<td align="left">Student Name</td>
+<td>: <input type="text" name="Sname" value="Name" size="30" maxlength="30"></td>
+</tr>
+
+<tr>
+<td align="left">Email address</td>
+<td>: <input type="email" name="Semail" value="Student@gmail.com" size="30" maxlength="30"></td>
+<td align="left">IC No.</td>
+<td>: <input type="text" name="Sic" size="30" maxlength="12"></td>
+</tr>
+
+<tr>
+<td align="left">Course</td>
+<td>: <select name="course">
+<option value="0">-List of Courses-</option>
+<optgroup label="Diploma in Computer Science">
+<option value="DCS_s1">-semester 1-</option>
+<option value="DCS_s2">-semester 2-</option>
+<option value="DCS_s3">-semester 3-</option>
+</optgroup>
+<optgroup label="Diploma in Business">
+<option value="DIB_s1">-semester 1-</option>
+<option value="DIB_s2">-semester 2-</option>
+<option value="DIB_s3">-semester 3-</option>
+</optgroup>
+<optgroup label="Diploma in Airline Services">
+<option value="DAS_s1">-semester 1-</option>
+<option value="DAS_s2">-semester 2-</option>
+<option value="DAS_s3">-semester 3-</option>
+</optgroup>
+</select>
+</td>
+<td align="left">D.O.B</td>
+<td>: <input type="date" name="dob"></td>
+</tr>
+</table>
+
+<br><br>
+
+<table align="center">
+<tr>
+<td align="left" colspan="2"><u>Questions</u></td>
+</tr>
+
+<tr>
+<td align="left" colspan="2"><b>Please answer all questions</b></td>
+</tr>
+
+<tr>
+<td align="left">1) Have you grasped the content of the Website Design so far?</td>
+<td align="left">
+<input type="radio" name="grasp" value="YES">YES<br>
+<input type="radio" name="grasp" value="NO">NO
+</td>
+</tr>
+</table>
+
+</body>
+</html>
