@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MY WEBSITE</title>
+
+<link rel="icon" href="kirk.jpg" type="image/jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+function alert1(){
+alert("col-1 row-1!");
+}
+
+function alert2(){
+alert("col-2 row-1!");
+}
+
+function alert3(){
+alert("col-3 row-1!");
+}
+
+function changeBg(element){
+element.style.backgroundColor = "yellow";
+}
+</script>
+</head>
+<body leftmargin="500px">
+
+<table border="3" width="50%" height="80" align="center">
+<caption> My First Web Table<br><br></caption>
+<tr>
+<th onclick="alert1(this)">head1</th>
+<th onmouseover="alert2(this)">head2</th>
+<th ondblclick="alert3(this)">head3</th>
+<th onclick="changeBg(this)">head4</th>
+</tr>
+
+<tr>
+<td>data row1-col1</td>
+<td>data row1-col2</td>
+<td>data row1-col3</td>
+<td>data row1-col4</td>
+</tr>
+
+<tr>
+<td>data row2-col1</td>
+<td>data row2-col2</td>
+<td>data row2-col3</td>
+<td>data row2-col4</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Quiz part 2</title>
+<style>
+table {
+border-collapse: separate;
+width: 50%;
+}
+input {
+width: 100%;
+box-sizing: border-box;
+}
+</style>
+<script>
+function calculateResults() {
+var assignment1Marks = parseFloat(document.getElementById("assign1").value) || 0;
+var assignment2Marks = parseFloat(document.getElementById("assign2").value) || 0;
+
+if (assignment1Marks > 50 || assignment1Marks < 0) {
+alert("Assignment 1 marks must be between 0 and 50!");
+return;
+}
+
+if (assignment2Marks > 50 || assignment2Marks < 0) {
+alert("Assignment 2 marks must be between 0 and 50!");
+return;
+}
+
+var totalMarks = assignment1Marks + assignment2Marks;
+
+document.getElementById("totalOutput").innerHTML = totalMarks;
+
+var gradeBox = document.getElementById("gradeOutput");
+
+if (totalMarks >= 50) {
+gradeBox.innerHTML = "Pass";
+gradeBox.style.color = "green";
+} else {
+gradeBox.innerHTML = "Fail";
+gradeBox.style.color = "red";
+}
+}
+</script>
+</head>
+<body>
+<h1>Results Calculator</h1>
+<p>Enter your marks for each type</p>
+<table border="1">
+<tr>
+<th>Type</th>
+<th>Weight</th>
+<th>Marks</th>
+</tr>
+<tr>
+<td>Assignment 1</td>
+<td>50%</td>
+<td><input type="number" id="assign1" min="0" max="50"></td>
+</tr>
+<tr>
+<td>Assignment 2</td>
+<td>50%</td>
+<td><input type="number" id="assign2" min="0" max="50"></td>
+</tr>
+<tr>
+<td colspan="2">Total Marks</td>
+<td><output id="totalOutput"></output></td>
+</tr>
+<tr>
+<td colspan="2">Pass / Fail</td>
+<td><output id="gradeOutput"></output></td>
+</tr>
+</table>
+<button type="button" onclick="calculateResults()">Calculate</button>
+</body>
+</html>
