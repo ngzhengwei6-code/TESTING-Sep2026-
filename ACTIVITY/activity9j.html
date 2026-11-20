@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> My First Website</title>
+<link rel=icon href=kirk.jpg type=image/jpg>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+<link rel="stylesheet" href="style.css">
+
+<style>
+table{
+background-color:powderblue
+}
+p{
+color:#696969;
+font-family:verdana;
+font-size:160%;
+text-align:center;
+Width:60%;
+height:40%
+}
+.left-cell {
+  background-color:#5E7D7E;
+  color: white;
+  padding: 8px;
+}
+
+</style>
+</head>
+<body>
+
+<center>
+
+<form>
+
+<p>
+<table>
+Personal details:
+<tr>
+<td class="left-cell" align=left>First Name:</td>
+<td><input type=text name=fname value="name" size=50 maxlength=10></td>
+<tr>
+<td class="left-cell" align=left>Last Name:</td>
+<td><input type=text name=lname placeholder='last name' autofocus size=20 maxlength=5></td>
+<br>
+<tr>
+<td class="left-cell" align=left>Gender:</td><td>
+<input type= radio name = gender value = Male>Male
+<input type= radio name = gender value = Female>Female
+<br></td>
+<tr>
+<td class="left-cell" align=left>Choose your favorite subject:</td>
+<td>
+<input type=checkbox name=fav_sub value=DCS4103 checked>DCS4103
+<input type=checkbox name=fav_sub value=DCS3003 disabled>DCS3003
+<input type=checkbox name=fav_sub value=MST1003>MST1003
+<input type=checkbox name=fav_sub value=MST2003>MST2002
+</td>
+</tr>
+<br>
+<tr>
+<td class="left-cell">Address:</td>
+<td>
+<textarea rows=4 cols=30 name=address></textarea>
+</td>
+</tr>
+<br>
+<tr>
+<td class="left-cell">Date of Birth:</td>
+<td>
+<input type = date name=dob min=2000-01-01 max=2005-12-31>
+</td>
+</tr>
+<br>
+<tr>
+<td class="left-cell">Login Password:</td>
+<td ><input type=password name=Loginpass readonly> 
+</td> 
+</tr>
+<br>
+<tr>
+<td class="left-cell">Course:</td>
+<td><select>
+<option value="0">-List of Courses-</option>
+<optgroup label="Diploma in Computer Science">
+<option value="DCS_s1">-semester 1-</option>
+<option value="DCS_s2">-semester 2-</option>
+<option value="DCS_s3">-semester 3-</option>
+<option value="DIB">-Diploma in Buisness-</option>
+<option value="DAS">-Diploma in Airline Services-</option>
+</select></td>
+<tr>
+<td colspan="2" align="center">
+<br>
+<input type=submit value=Submit>
+<input type=reset value=Reset>
+</td>
+</tr>
+
+</table>
+</form>
+
+</center>
+</body>
+</html>

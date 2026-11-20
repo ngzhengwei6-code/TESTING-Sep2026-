@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 19 - list of courses</title>
+
+
+    <script>
+        function filterSubjects(){
+        var selectedCourse = document.getElementById("courseList").value;
+        var subjectDropdown = document.getElementById("subjectList");
+
+        if (selectedCourse == ""){
+            subjectDropdown.innerHTML = '<option value="">-Select a course First-</option>';
+            subjectDropdown.disabled = true;
+
+        }else if (selectedCourse == "DCS"){
+            subjectDropdown.disabled = false;
+            subjectDropdown.innerHTML = '<option value="DCS1003">DCS1003</option>' + '<option value="DCS2003">DCS2003</option>'+'<option value="DCS3003">DC3003</option>';
+        }else if (selectedCourse == "DIB"){
+            subjectDropdown.disabled = false;
+            subjectDropdown.innerHTML = '<option value="DIB1003">DIB1003</option>'+ '<option value="DIB2003">DIB2003</option>'+'<option value="DIB3003">DIB3003</option>';
+        }else if (selectedCourse == "DAS"){
+            subjectDropdown.disabled = false;
+            subjectDropdown.innerHTML = '<option value="DAS1003">DAS1003</option>'+ '<option value="DAS2003">DAS2003</option>'+'<option value="DAS3003">DAS3003</option>';
+        }
+    }
+    </script>
+</head>
+
+
+<body>
+
+    <h1> Course selection list using onchange function</h1>
+
+    <form>
+
+<label> Course List:</label>
+<select id="courseList" onchange="filterSubjects()">
+<optgroup label="-Available courses-">
+<option value=""> List of Available Courses</option>
+<option value="DCS">DCS</option>
+<option value="DIB">DIB</option>
+<option value="DAS">DAS</option>
+</optgroup>
+</select>
+
+<br><br>
+
+<label> Subject List:</label>
+<select id="subjectList" name="subject" disabled>
+    <option value ="">-Select a Course First-</option>
+    </select>
+    </form>
+</body>
+</html>
